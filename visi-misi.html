@@ -1,50 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- link css -->
+    <title>Visi, Misi & Tujuan - SMA Negeri 1 Kudus</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/visi-misi.css">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-    <!-- top bar -->
+
+    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="top-info">
             <span><i class="fas fa-phone"></i> (0291) 431368</span>
             <span><i class="fas fa-envelope"></i> info@sma1kudus.sch.id</span>
             <span><i class="fas fa-map-marker-alt"></i> Jl. Pramuka No.41, Kudus</span>
         </div>
-
         <div class="top-social">
             <span>NPSN: 20317531 | Akreditasi A</span>
         </div>
     </div>
 
-    <!-- navbar -->
+    <!-- NAVIGATION -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <div class="logo-icon">
-                    <img src="assets/logoSMA.png" alt="Logo SMAN 1 Kudus">
-                </div>
+      <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="assets/other/logoSMA.png" alt="Logo SMAN 1 Kudus">
+            </div>
 
-                <div class="logo-text">
-                    <h1>SMAN 1 KUDUS</h1>
-                    <p>SMASAKU BERSINERGI</p>
+            <div class="logo-text">
+                <h1>SMAN 1 KUDUS</h1>
+                <p>SMASAKU BERSINERGI</p>
+            </div>
+        </div>
+
+        <!-- Tombol hamburger (mobile) -->
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="visi-misi.html" class="active">Visi & Misi</a></li>
+            <li><a href="guru-staf.html">Guru & Staf</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE HERO HEADER -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <h1>Visi, Misi & Tujuan Sekolah</h1>
+            <p>Arah dan komitmen berkelanjutan SMA Negeri 1 Kudus dalam membentuk generasi penerus bangsa yang unggul, berkarakter, dan siap bersaing di era global.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 1: VISI -->
+    <section>
+        <div class="section-title">
+            <span>Landasan Utama</span>
+            <h2>Visi Sekolah</h2>
+        </div>
+
+        <div class="visi-container">
+            <div class="visi-header">
+                <div class="visi-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <div>
+                    <h3>Pernyataan Visi SMAN 1 Kudus</h3>
+                    <small style="color: var(--text-muted);">Periode Pengembangan Kurikulum Operasional Sekolah</small>
                 </div>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="visi-misi.html" class="active">Visi & Misi</a></li>
-                <li><a href="guru-staf.html">Guru & Staf</a></li>
-                <li><a href="sejarah.html">Sejarah</a></li>
-                <li><a href="galeri.html">Galeri</a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="visi-quote">
+                "Terwujudnya Lulusan yang Bertakwa, Berkarakter Pancasila, Berprestasi Tinggi, Berwawasan Global, dan Peduli Lingkungan."
+            </div>
+
+            <div class="visi-pillars">
+                <div class="pillar-item">
+                    <i class="fas fa-hands-praying"></i> Bertakwa & Beriman
+                </div>
+                <div class="pillar-item">
+                    <i class="fas fa-star"></i> Karakter Pancasila
+                </div>
+                <div class="pillar-item">
+                    <i class="fas fa-trophy"></i> Prestasi Akademik & Non-Akademik
+                </div>
+                <div class="pillar-item">
+                    <i class="fas fa-globe"></i> Berwawasan Global
+                </div>
+                <div class="pillar-item">
+                    <i class="fas fa-leaf"></i> Peduli Kelestarian Lingkungan
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: MISI -->
+    <section style="background-color: var(--white);">
+        <div class="section-title">
+            <span>Langkah Strategis</span>
+            <h2>Misi Sekolah</h2>
+        </div>
+
+        <div class="misi-grid">
+            <!-- Misi 1 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">01</div>
+                        <span class="misi-tag">Religius & Karakter</span>
+                    </div>
+                    <h4>Penguatan Nilai Keimanan & Ketaqwaan</h4>
+                    <p>Menanamkan nilai-nilai keimanan, ketaqwaan, dan akhlak mulia melalui pembiasaan kehidupan agamis, literasi Al-Qur'an/keagamaan, serta toleransi antarumat beragama di lingkungan sekolah.</p>
+                </div>
+            </div>
+
+            <!-- Misi 2 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">02</div>
+                        <span class="misi-tag">Pembelajaran Modern</span>
+                    </div>
+                    <h4>Pembelajaran Inovatif Berbasis Teknologi</h4>
+                    <p>Menyelenggarakan proses pembelajaran yang berbasis digital, kritis, inovatif, dan berpusat pada siswa dengan memanfaatkan potensi teknologi informasi terdepan.</p>
+                </div>
+            </div>
+
+            <!-- Misi 3 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">03</div>
+                        <span class="misi-tag">Pengembangan Bakat</span>
+                    </div>
+                    <h4>Pencapaian Prestasi Optimal</h4>
+                    <p>Mendorong dan memfasilitasi seluruh potensi peserta didik untuk meraih keunggulan dan prestasi maksimal di bidang sains, riset, olahraga, seni, dan kebudayaan.</p>
+                </div>
+            </div>
+
+            <!-- Misi 4 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">04</div>
+                        <span class="misi-tag">Keterampilan Abad-21</span>
+                    </div>
+                    <h4>Pengembangan Wawasan Global</h4>
+                    <p>Mengembangkan keterampilan kolaborasi, komunikasi internasional, berpikir kritis, serta penguasaan bahasa asing untuk menyiapkan lulusan yang berdaya saing global.</p>
+                </div>
+            </div>
+
+            <!-- Misi 5 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">05</div>
+                        <span class="misi-tag">Adiwiyata & Lingkungan</span>
+                    </div>
+                    <h4>Pelestarian & Budaya Lingkungan</h4>
+                    <p>Mewujudkan lingkungan sekolah yang bersih, hijau, asri, dan sehat serta menumbuhkan kesadaran kolektif terhadap pelestarian lingkungan dan penanganan sampah (Zero Waste).</p>
+                </div>
+            </div>
+
+            <!-- Misi 6 -->
+            <div class="misi-card">
+                <div>
+                    <div class="misi-card-header">
+                        <div class="misi-num">06</div>
+                        <span class="misi-tag">Tata Kelola Unggul</span>
+                    </div>
+                    <h4>Manajemen Sekolah Transparan & Akuntabel</h4>
+                    <p>Meningkatkan mutu tata kelola sekolah melalui implementasi manajemen berbasis sekolah yang partisipatif, akuntabel, dan berorientasi pada pelayanan kepuasan publik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TUJUAN SEKOLAH -->
+    <section>
+        <div class="section-title">
+            <span>Target Pencapaian</span>
+            <h2>Tujuan Strategis Sekolah</h2>
+        </div>
+
+        <div class="tujuan-tabs-wrapper">
+            <div class="tujuan-timeline">
+                <!-- Jangka Pendek -->
+                <div class="tujuan-box">
+                    <span class="tujuan-box-badge">Tujuan Jangka Pendek (1 Tahun)</span>
+                    <h3>Penguatan Mutu & Digitalisasi</h3>
+                    <ul class="tujuan-list">
+                        <li>Meningkatkan rata-rata nilai akademik dan tingkat kelulusan SNMPTN/SNBP hingga di atas 85%.</li>
+                        <li>Mengoptimalkan implementasi Platform Pembelajaran Digital secara 100% di semua mata pelajaran.</li>
+                        <li>Mempertahankan predikat Juara Umum Olimpiade Sains (OSN) tingkat Kabupaten Kudus.</li>
+                        <li>Terwujudnya pembiasaan budaya literasi dan kedisiplinan harian seluruh peserta didik.</li>
+                    </ul>
+                </div>
+
+                <!-- Jangka Menengah -->
+                <div class="tujuan-box">
+                    <span class="tujuan-box-badge">Tujuan Jangka Menengah (2-3 Tahun)</span>
+                    <h3>Reputasi Nasional & Prestasi Riset</h3>
+                    <ul class="tujuan-list">
+                        <li>Lulusan yang diterima di Perguruan Tinggi Negeri (PTN) Favorit mencapai minimal 90%.</li>
+                        <li>Meraih medali dalam Olimpiade Sains Nasional (OSN) dan Lomba Karya Tulis Ilmiah (LKTI) tingkat Nasional.</li>
+                        <li>Memperoleh Sertifikasi Sekolah Adiwiyata Mandiri/Nasional berwawasan lingkungan hidup.</li>
+                        <li>Meningkatkan kerjasama kemitraan dengan perguruan tinggi ternama dan industri global.</li>
+                    </ul>
+                </div>
+
+                <!-- Jangka Panjang -->
+                <div class="tujuan-box">
+                    <span class="tujuan-box-badge">Tujuan Jangka Panjang (4-5 Tahun)</span>
+                    <h3>Pusat Keunggulan Global</h3>
+                    <ul class="tujuan-list">
+                        <li>Menjadi Sekolah Model Rujukan Pembelajaran Digital dan Karakter Pancasila di Jawa Tengah.</li>
+                        <li>Mengirimkan representasi peserta didik dalam ajang kompetisi sains dan kebudayaan internasional.</li>
+                        <li>Menghasilkan alumni berkarakter pemimpin yang unggul di berbagai sektor strategis nasional.</li>
+                        <li>Mewujudkan kampus hijau *Eco-Friendly Smart School* terpadu.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+
+        <!-- Kolom 1: Logo, Semboyan & Media Sosial -->
+        <div class="footer-col footer-brand">
+
+          <div class="footer-logo">
+            <img src="assets/other/logoSMA.png" alt="Logo SMA Negeri 1 Kudus">
+          </div>
+
+          <div class="footer-brand-content">
+            <h4>Semboyan Sekolah</h4>
+
+            <p class="footer-quote">
+              "Pendidikan bukan sekadar mengisi wadah, melainkan
+              menyalakan api pengetahuan, integritas, dan semangat
+              berkarya untuk bangsa."
+            </p>
+
+            <div class="footer-socials">
+              <a href="#" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Informasi -->
+        <div class="footer-col">
+          <h4>Informasi</h4>
+
+          <div class="footer-links-list">
+            <a href="waka/waka-kurikulum.html">
+              <i class="fas fa-angle-right"></i> Waka Kurikulum
+            </a>
+            <a href="waka/waka-kesiswaan.html">
+              <i class="fas fa-angle-right"></i> Waka Kesiswaan
+            </a>
+            <a href="waka/waka-prasarana.html">
+              <i class="fas fa-angle-right"></i> Waka Sarana Prasarana
+            </a>
+            <a href="waka/waka-humas.html">
+              <i class="fas fa-angle-right"></i> Waka Humas
+            </a>
+            <a href="waka/kontak.html">
+              <i class="fas fa-angle-right"></i> Kontak Smasaku
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom 3: Unduhan -->
+        <div class="footer-col">
+          <h4>Unduhan & Berkas</h4>
+
+          <div class="footer-links-list">
+            <a href="assets/pdf/KALDIK-PROV-JATENG-2026-2027.pdf">
+              <i class="fas fa-file-pdf"></i> Kalender Akademik 2025/2026
+            </a>
+            <a href="https://sma.kemendikdasmen.go.id/digihub/ebook">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Buku Panduan Siswa
+            </a>
+            <a href="https://journal.unpas.ac.id/index.php/pendas/article/view/67299/38679">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i></i> Jurnal Penelitian Sekolah
+            </a>
+            <a href="assets/pdf/JUKOP-SPMB-SMAN-SMKN-SLBN-Jateng-2026-.pdf">
+              <i class="fas fa-file-pdf"></i> Brosur SPMB Online
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMA Negeri 1 Kudus (SMASA).</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

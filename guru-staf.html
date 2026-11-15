@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru & Staf - SMA Negeri 1 Kudus</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/guru-staf.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-info">
+        <span><i class="fas fa-phone"></i> (0291) 431368</span>
+        <span><i class="fas fa-envelope"></i> info@sma1kudus.sch.id</span>
+        <span><i class="fas fa-map-marker-alt"></i> Jl. Pramuka No.41, Kudus</span>
+      </div>
+      <div class="top-social">
+        <span>NPSN: 20317531 | Akreditasi A</span>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="assets/other/logoSMA.png" alt="Logo SMAN 1 Kudus">
+            </div>
+
+            <div class="logo-text">
+                <h1>SMAN 1 KUDUS</h1>
+                <p>SMASAKU BERSINERGI</p>
+            </div>
+        </div>
+
+        <!-- Tombol hamburger (mobile) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="visi-misi.html">Visi & Misi</a></li>
+            <li><a href="guru-staf.html" class="active">Guru & Staf</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE HERO HEADER -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <h1>Guru & Tenaga Kependidikan</h1>
+            <p>Mengenal pendidik dan staf profesional SMA Negeri 1 Kudus yang berdedikasi tinggi membimbing generasi emas berkarakter dan berprestasi.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 1: STATISTIK & PIMPINAN -->
+    <section class="full-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Struktur Organisasi</span>
+                <h2>Pimpinan Sekolah</h2>
+            </div>
+
+            <!-- Leadership Grid (Diisi via JavaScript) -->
+            <div class="leadership-grid" id="leadership-container"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: DAFTAR DEWAN GURU -->
+    <section class="full-section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <span>Tenaga Pendidik</span>
+                <h2>Dewan Guru</h2>
+            </div>
+
+            <!-- Guru Grid (Diisi via JavaScript) -->
+            <div class="staff-grid" id="guru-container"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DAFTAR STAF & TENAGA KEPENDIDIKAN -->
+    <section class="full-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <span>Tenaga Kependidikan</span>
+                <h2>Staf & Tata Usaha</h2>
+            </div>
+
+            <!-- Staf Grid (Diisi via JavaScript) -->
+            <div class="staff-grid" id="staf-container"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+
+        <!-- Kolom 1: Logo, Semboyan & Media Sosial -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="assets/other/logoSMA.png" alt="Logo SMA Negeri 1 Kudus">
+          </div>
+
+          <div class="footer-brand-content">
+            <h4>Semboyan Sekolah</h4>
+            <p class="footer-quote">
+              "Pendidikan bukan sekadar mengisi wadah, melainkan
+              menyalakan api pengetahuan, integritas, dan semangat
+              berkarya untuk bangsa."
+            </p>
+
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/sman1kudus?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/pages/SMA%201%20Kudus/169882746373431/#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.tiktok.com/@sman1kudus?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="https://www.youtube.com/@smanegeri1kudus" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Informasi -->
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <div class="footer-links-list">
+            <a href="waka/waka-kurikulum.html">
+              <i class="fas fa-angle-right"></i> Waka Kurikulum
+            </a>
+            <a href="waka/waka-kesiswaan.html">
+              <i class="fas fa-angle-right"></i> Waka Kesiswaan
+            </a>
+            <a href="waka/waka-prasarana.html">
+              <i class="fas fa-angle-right"></i> Waka Sarana Prasarana
+            </a>
+            <a href="waka/waka-humas.html">
+              <i class="fas fa-angle-right"></i> Waka Humas
+            </a>
+            <a href="waka/kontak.html">
+              <i class="fas fa-angle-right"></i> Kontak Smasaku
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom 3: Unduhan -->
+        <div class="footer-col">
+          <h4>Unduhan & Berkas</h4>
+          <div class="footer-links-list">
+            <a href="assets/pdf/KALDIK-PROV-JATENG-2026-2027.pdf">
+              <i class="fas fa-file-pdf"></i> Kalender Akademik 2025/2026
+            </a>
+            <a href="https://sma.kemendikdasmen.go.id/digihub/ebook">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Buku Panduan Siswa
+            </a>
+            <a href="https://journal.unpas.ac.id/index.php/pendas/article/view/67299/38679">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Jurnal Penelitian Sekolah
+            </a>
+            <a href="assets/pdf/JUKOP-SPMB-SMAN-SMKN-SLBN-Jateng-2026-.pdf">
+              <i class="fas fa-file-pdf"></i> Brosur SPMB Online
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMA Negeri 1 Kudus (SMASA).</p>
+      </div>
+    </footer>
+
+    <!-- SCRIPT MENU MOBILE -->
+    <!-- JAVASCRIPT DATA & RENDERING -->
+    <script src="js/guru-staf.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
