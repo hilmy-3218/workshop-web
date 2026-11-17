@@ -137,42 +137,65 @@ const dataStaf = [
 ];
 
 // Fungsi Render Pimpinan
-function renderPimpinan() {
-    const container = document.getElementById("leadership-container");
-    container.innerHTML = dataPimpinan.map(item => `
-        <div class="leader-card">
-            <div class="leader-img">
-                <img src="${item.foto}" alt="${item.jabatan}">
-            </div>
-            <div class="leader-info">
-                <span class="leader-role">${item.jabatan}</span>
-                <h3>${item.nama}</h3>
-                <p>${item.keterangan}</p>
-            </div>
-        </div>
-    `).join("");
-}
-
-// Fungsi Render Guru & Staf
-function renderStaffCards(dataArray, containerId, roleKey) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = dataArray.map(item => `
-        <div class="staff-card">
-            <div class="staff-avatar">
-                <img src="${item.foto}" alt="${item.nama}">
-            </div>
-            <div class="staff-body">
-                <h4>${item.nama}</h4>
-                <span class="staff-subject">${item[roleKey]}</span>
-                <p class="staff-nip">${item.nip}</p>
-            </div>
-        </div>
-    `).join("");
-}
-
-// Jalankan saat halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
-    renderPimpinan();
-    renderStaffCards(dataGuru, "guru-container", "mapel");
-    renderStaffCards(dataStaf, "staf-container", "posisi");
+
+    // Tampilkan pimpinan
+    const leadershipContainer = document.getElementById("leadership-container");
+
+    dataPimpinan.forEach((pimpinan) => {
+        leadershipContainer.innerHTML += `
+            <div class="leader-card">
+                <div class="leader-img">
+                    <img src="${pimpinan.foto}" alt="${pimpinan.jabatan}">
+                </div>
+
+                <div class="leader-info">
+                    <span class="leader-role">${pimpinan.jabatan}</span>
+                    <h3>${pimpinan.nama}</h3>
+                    <p>${pimpinan.keterangan}</p>
+                </div>
+            </div>
+        `;
+    });
+
+
+    // Tampilkan guru
+    const guruContainer = document.getElementById("guru-container");
+
+    dataGuru.forEach((guru) => {
+        guruContainer.innerHTML += `
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <img src="${guru.foto}" alt="${guru.nama}">
+                </div>
+
+                <div class="staff-body">
+                    <h4>${guru.nama}</h4>
+                    <span class="staff-subject">${guru.mapel}</span>
+                    <p class="staff-nip">${guru.nip}</p>
+                </div>
+            </div>
+        `;
+    });
+
+
+    // Tampilkan staf
+    const stafContainer = document.getElementById("staf-container");
+
+    dataStaf.forEach((staf) => {
+        stafContainer.innerHTML += `
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <img src="${staf.foto}" alt="${staf.nama}">
+                </div>
+
+                <div class="staff-body">
+                    <h4>${staf.nama}</h4>
+                    <span class="staff-subject">${staf.posisi}</span>
+                    <p class="staff-nip">${staf.nip}</p>
+                </div>
+            </div>
+        `;
+    });
+
 });

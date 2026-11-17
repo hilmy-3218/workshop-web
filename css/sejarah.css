@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #7f1d1d; /* Deep Red */
+    --secondary-color: #b91c1c; /* Royal Red */
+    --accent-color: #ffae21; /* Gold Accent */
+    --accent-hover: #d97706;
+    --text-muted: #141517;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER & NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-info span {
+    margin-right: 20px;
+}
+
+.top-info i {
+    color: var(--accent-color);
+    margin-right: 6px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.logo-text p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* TOMBOL HAMBURGER */
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    background: var(--secondary-color);
+}
+
+/* ==================== PAGE HERO / BANNER ==================== */
+.history-hero {
+    position: relative;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 100px 5% 80px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.history-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.history-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.history-hero p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.7;
+}
+
+/* ==================== COMMON LAYOUT ==================== */
+section {
+    padding: 80px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+/* ==================== HISTORY OVERVIEW ==================== */
+.history-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.history-intro-text h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.history-intro-text p {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.quote-box {
+    background: #fff;
+    border-left: 4px solid var(--accent-color);
+    padding: 20px 25px;
+    border-radius: 0 12px 12px 0;
+    box-shadow: var(--shadow);
+    margin-top: 25px;
+}
+
+.quote-box p {
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px !important;
+}
+
+.quote-box span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.history-intro-gallery {
+    position: relative;
+}
+
+.main-history-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 4px solid var(--white);
+}
+
+.badge-established {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    border: 3px solid var(--accent-color);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.badge-established .year {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    line-height: 1;
+}
+
+.badge-established .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* ==================== INTERACTIVE TIMELINE (TEXT-ONLY CARDS) ==================== */
+.timeline-section {
+    background-color: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    padding: 60px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color), var(--secondary-color));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container.left {
+    left: 0;
+}
+
+.timeline-container.right {
+    left: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: -12px;
+    background-color: var(--white);
+    border: 4px solid var(--accent-color);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.timeline-container.right::after {
+    left: -12px;
+}
+
+.timeline-container:hover::after {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.timeline-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    padding: 25px;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-color);
+}
+
+.timeline-year-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    margin-top: 80px;
+    padding-top: 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5% 25px;
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr 1.2fr;
+    gap: 40px;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-col h4 {
+    color: var(--accent-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-logo {
+    flex-shrink: 0;
+    width: 95px;
+    margin-top: 35px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-brand-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.footer-quote {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+    border-left: 2px solid var(--accent-color);
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 7px;
+}
+
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-links-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.footer-links-list a i {
+    font-size: 0.9rem;
+}
+
+.footer-links-list a:hover {
+    color: var(--accent-color);
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 992px) {
+    .top-info span {
+        margin-right: 12px;
+    }
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-links a {
+        font-size: 0.88rem;
+    }
+    .history-intro {
+        grid-template-columns: 1fr;
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-container.right {
+        left: 0%;
+    }
+    .timeline-container.left::after, .timeline-container.right::after {
+        left: 19px;
+    }
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 30px;
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+    .footer-logo {
+        width: 65px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+    .navbar {
+        padding: 12px 5%;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--white);
+        padding: 10px 5% 20px;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links li {
+        border-bottom: 1px solid var(--border-color);
+    }
+    .nav-links li:last-child {
+        border-bottom: none;
+        margin-top: 15px;
+    }
+    .nav-links a {
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+        padding: 12px 20px;
+    }
+    .nav-links a::after {
+        display: none;
+    }
+    section {
+        padding: 60px 5%;
+    }
+    .section-title {
+        margin-bottom: 35px;
+    }
+    .section-title h2 {
+        font-size: 1.7rem;
+    }
+    .history-hero h1 {
+        font-size: 2.2rem;
+    }
+    .badge-established {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 20px;
+    }
+    .timeline-section {
+        padding: 40px 15px;
+    }
+    footer {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 6% 25px;
+    }
+    .footer-brand {
+        grid-column: auto;
+        gap: 12px;
+    }
+    .footer-logo {
+        width: 50px;
+        margin-top: 30px;
+    }
+    .footer-col h4 {
+        font-size: 1.2rem;
+    }
+    .footer-quote {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    .footer-links-list a {
+        font-size: 0.9rem;
+    }
+    .footer-socials a {
+        width: 28px;
+        height: 28px;
+    }
+    .footer-bottom {
+        font-size: 0.75rem;
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    .logo-text h1 {
+        font-size: 1.05rem;
+    }
+    .logo-text p {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+    }
+    .history-hero h1 {
+        font-size: 1.9rem;
+    }
+    .footer-brand {
+        gap: 8px;
+    }
+    .footer-logo {
+        width: 40px;
+    }
+    .footer-quote {
+        font-size: 0.78rem;
+    }
+}
