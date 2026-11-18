@@ -158,7 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
 
-
     // Tampilkan guru
     const guruContainer = document.getElementById("guru-container");
 

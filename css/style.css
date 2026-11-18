@@ -510,6 +510,15 @@ section {
     gap: 30px;
 }
 
+/* Style untuk wrapper link kartu */
+.event-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
 .event-card {
     background: var(--white);
     border-radius: 15px;
@@ -517,13 +526,16 @@ section {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid var(--border-color);
+    height: 100%; /* Memastikan tinggi card rata dalam satu grid */
 }
 
-.event-card:hover {
+/* Efek hover dipindahkan ke wrapper link agar seluruh card ikut terangkat */
+.event-card-link:hover .event-card {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.event-card:hover .card-img {
+.event-card-link:hover .card-img {
     transform: scale(1.05);
 }
 

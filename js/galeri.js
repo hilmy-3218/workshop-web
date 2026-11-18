@@ -18,7 +18,7 @@ const galleryData = [
     alt: "Pementasan Teater SMAN 1 Kudus di FTP 2026",
     description:
       "Penampilan memukau tim teater SMAN 1 Kudus saat membuka babak penyisihan FTP 2026 lewat lakon 'Jangan Sampai Puncak'.",
-    link: "detail-ftp-2026.html",
+    link: "./details/detail-ftp-2026.html",
   },
   {
     title: "Peringatan Hari Santri 2026",
@@ -28,7 +28,7 @@ const galleryData = [
     alt: "Peringatan Hari Santri 2026 di Alun-Alun Simpang Tujuh",
     description:
       "Partisipasi siswa SMAN 1 Kudus bersama ribuan peserta memadati Alun-Alun Simpang Tujuh dalam peringatan Hari Santri 2026.",
-    link: "detail-hari-santri-2026.html",
+    link: "./details/detail-hari-santri-2026.html",
   },
   {
     title: "Perpustakaan SMASA",
@@ -48,7 +48,7 @@ const galleryData = [
     alt: "Prestasi Taekwondo Internasional SMAN 1 Kudus",
     description:
       "Larasati Putrinuri sukses menyabet medali emas dan perak pada ajang Pugnator International Open Taekwondo Grandslam Youth Champions 2026.",
-    link: "detail-taekwondo-internasional.html",
+    link: "./details/detail-taekwondo-internasional.html",
   },
   {
     title: "Laboratorium Komputer",

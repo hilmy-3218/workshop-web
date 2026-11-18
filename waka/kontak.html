@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Kontak Kami - SMA Negeri 1 Kudus</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          scroll-behavior: smooth;
+      }
+
+      :root {
+          --primary-color: #7f1d1d; /* Deep Red */
+          --secondary-color: #b91c1c; /* Royal Red */
+          --accent-color: #ffae21; /* Gold Accent */
+          --accent-hover: #d97706;
+          --text-muted: #141517;
+          --bg-light: #f8fafc;
+          --white: #ffffff;
+          --border-color: #e2e8f0;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          --transition: all 0.3s ease;
+      }
+
+      html {
+          -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+          background-color: var(--bg-light);
+          color: var(--text-muted);
+          line-height: 1.6;
+          overflow-x: hidden;
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      ul {
+          list-style: none;
+      }
+
+      /* HEADER & NAVBAR */
+      header {
+          position: sticky;
+          top: 0;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+          z-index: 1000;
+      }
+
+      .top-bar {
+          background-color: var(--primary-color);
+          color: var(--white);
+          padding: 8px 5%;
+          font-size: 0.85rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+      }
+
+      .top-info span {
+          margin-right: 20px;
+      }
+
+      .top-info i {
+          color: var(--accent-color);
+          margin-right: 6px;
+      }
+
+      .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 5%;
+          max-width: 1300px;
+          margin: 0 auto;
+      }
+
+      .logo {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+      }
+
+      .logo-icon {
+          width: 45px;
+          height: 45px;
+          background: var(--primary-color);
+          color: var(--accent-color);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: 800;
+          flex-shrink: 0;
+      }
+
+      .logo-icon img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 10px;
+      }
+
+      .logo-text h1 {
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: var(--primary-color);
+          line-height: 1.1;
+      }
+
+      .logo-text p {
+          font-size: 0.75rem;
+          color: var(--text-muted);
+          letter-spacing: 1px;
+      }
+
+      .nav-links {
+          display: flex;
+          gap: 25px;
+          align-items: center;
+      }
+
+      .nav-links a {
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          transition: var(--transition);
+          position: relative;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+          color: var(--accent-color);
+      }
+
+      .nav-links a::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background-color: var(--accent-color);
+          transition: var(--transition);
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+          width: 100%;
+      }
+
+      /* TOMBOL HAMBURGER */
+      .menu-toggle {
+          display: none;
+          width: 44px;
+          height: 44px;
+          border: none;
+          border-radius: 10px;
+          background: var(--primary-color);
+          color: var(--accent-color);
+          font-size: 1.3rem;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          transition: var(--transition);
+      }
+
+      .menu-toggle:hover {
+          background: var(--secondary-color);
+      }
+
+      /* ==================== COMMON LAYOUT ==================== */
+      section {
+        padding: 80px 5%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title span {
+        color: var(--accent-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        font-weight: 800;
+      }
+
+      /* ==================== PAGE HEADER ==================== */
+      .page-header {
+        background: var(--primary-color);
+        padding: 80px 5%;
+        text-align: center;
+        color: var(--white);
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .page-header p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      /* ==================== CONTACT SECTION ==================== */
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 50px;
+        margin-top: -40px;
+      }
+
+      .contact-info-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .info-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+      }
+
+      .info-icon-large {
+        width: 60px;
+        height: 60px;
+        background: rgba(127, 29, 29, 0.08);
+        color: var(--primary-color);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        flex-shrink: 0;
+      }
+
+      .info-card-text h4 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .info-card-text p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* FORM STYLE */
+      .contact-form-container {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+      }
+
+      .contact-form-container h3 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-weight: 800;
+      }
+
+      .contact-form-container > p {
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        font-size: 0.95rem;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        background: var(--bg-light);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        background: var(--white);
+        box-shadow: 0 0 0 3px rgba(127, 29, 29, 0.1);
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .btn-submit {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 14px 30px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-submit:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(127, 29, 29, 0.2);
+      }
+
+      /* FOOTER */
+      footer {
+          background: var(--primary-color);
+          color: var(--white);
+          margin-top: 80px;
+          padding-top: 30px;
+      }
+
+      .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 5% 25px;
+          display: grid;
+          grid-template-columns: 1.6fr 0.7fr 1.2fr;
+          gap: 40px;
+      }
+
+      .footer-col {
+          min-width: 0;
+      }
+
+      .footer-col h4 {
+          color: var(--accent-color);
+          font-size: 1.7rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+          position: relative;
+          padding-bottom: 7px;
+      }
+
+      .footer-col h4::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 35px;
+          height: 2px;
+          background: var(--accent-color);
+          border-radius: 2px;
+      }
+
+      .footer-brand {
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+      }
+
+      .footer-logo {
+          flex-shrink: 0;
+          width: 95px;
+          margin-top: 35px;
+      }
+
+      .footer-logo img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+      }
+
+      .footer-brand-content {
+          flex: 1;
+          min-width: 0;
+      }
+
+      .footer-quote {
+          font-style: italic;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 1rem;
+          line-height: 1.5;
+          border-left: 2px solid var(--accent-color);
+          padding-left: 12px;
+          margin-bottom: 12px;
+      }
+
+      .footer-socials {
+          display: flex;
+          gap: 7px;
+      }
+
+      .footer-socials a {
+          width: 35px;
+          height: 35px;
+          background: rgba(255, 255, 255, 0.12);
+          color: var(--white);
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          transition: var(--transition);
+      }
+
+      .footer-socials a:hover {
+          background: var(--accent-color);
+          color: var(--primary-color);
+          transform: translateY(-3px);
+      }
+
+      .footer-links-list {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+      }
+
+      .footer-links-list a {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 1rem;
+          transition: var(--transition);
+      }
+
+      .footer-links-list a i {
+          font-size: 0.9rem;
+      }
+
+      .footer-links-list a:hover {
+          color: var(--accent-color);
+          transform: translateX(4px);
+      }
+
+      .footer-bottom {
+          background: rgba(0, 0, 0, 0.2);
+          text-align: center;
+          padding: 15px;
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 0.95rem;
+      }
+
+      .footer-bottom p {
+          margin: 0;
+      }
+
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 992px) {
+          .top-info span {
+              margin-right: 12px;
+          }
+          .nav-links {
+              gap: 16px;
+          }
+          .nav-links a {
+              font-size: 0.88rem;
+          }
+          .contact-wrapper {
+              grid-template-columns: 1fr;
+          }
+          .footer-content {
+              grid-template-columns: 1.5fr 1fr;
+              gap: 30px;
+          }
+          .footer-brand {
+              grid-column: 1 / -1;
+          }
+          .footer-logo {
+              width: 65px;
+              margin-top: 30px;
+          }
+      }
+
+      /* Mobile: menu hamburger */
+      @media (max-width: 768px) {
+          .top-bar {
+              display: none;
+          }
+
+          .navbar {
+              padding: 12px 5%;
+          }
+
+          .menu-toggle {
+              display: flex;
+          }
+
+          .nav-links {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0;
+              flex-direction: column;
+              align-items: stretch;
+              gap: 0;
+              background: var(--white);
+              padding: 10px 5% 20px;
+              border-top: 1px solid var(--border-color);
+              box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+              max-height: calc(100vh - 70px);
+              overflow-y: auto;
+          }
+
+          .nav-links.open {
+              display: flex;
+          }
+
+          .nav-links li {
+              border-bottom: 1px solid var(--border-color);
+          }
+
+          .nav-links li:last-child {
+              border-bottom: none;
+              margin-top: 5px;
+          }
+
+          .nav-links a {
+              display: block;
+              text-align: center;
+              padding: 12px 20px;
+              font-size: 1rem;
+          }
+
+          .nav-links a::after {
+              display: none;
+          }
+
+          section {
+              padding: 60px 5%;
+          }
+
+          .section-title {
+              margin-bottom: 35px;
+          }
+
+          .section-title h2 {
+              font-size: 1.7rem;
+          }
+
+          .page-header h1 {
+              font-size: 2.2rem;
+          }
+
+          .contact-form-container {
+              padding: 25px;
+          }
+
+          footer {
+              margin-top: 40px;
+              padding-top: 30px;
+          }
+
+          .footer-content {
+              grid-template-columns: 1fr;
+              gap: 25px;
+              padding: 0 6% 25px;
+          }
+
+          .footer-brand {
+              grid-column: auto;
+              gap: 12px;
+          }
+
+          .footer-logo {
+              width: 50px;
+              margin-top: 30px;
+          }
+
+          .footer-col h4 {
+              font-size: 1.2rem;
+          }
+
+          .footer-quote {
+              font-size: 0.85rem;
+              line-height: 1.5;
+          }
+
+          .footer-links-list a {
+              font-size: 0.9rem;
+          }
+
+          .footer-socials a {
+              width: 28px;
+              height: 28px;
+          }
+
+          .footer-bottom {
+              font-size: 0.75rem;
+              padding: 15px 10px;
+          }
+      }
+
+      /* HP kecil */
+      @media (max-width: 480px) {
+          .logo-icon {
+              width: 40px;
+              height: 40px;
+              font-size: 1.25rem;
+          }
+
+          .logo-text h1 {
+              font-size: 1.05rem;
+          }
+
+          .logo-text p {
+              font-size: 0.65rem;
+              letter-spacing: 0.5px;
+          }
+
+          .footer-brand {
+              gap: 8px;
+          }
+
+          .footer-logo {
+              width: 40px;
+          }
+
+          .footer-quote {
+              font-size: 0.78rem;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-info">
+        <span><i class="fas fa-phone"></i> (0291) 431368</span>
+        <span><i class="fas fa-envelope"></i> info@sma1kudus.sch.id</span>
+        <span><i class="fas fa-map-marker-alt"></i> Jl. Pramuka No.41, Kudus</span>
+      </div>
+      <div class="top-social">
+        <span>NPSN: 20317531 | Akreditasi A</span>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="../assets/other/logoSMA.png" alt="Logo SMAN 1 Kudus">
+            </div>
+
+            <div class="logo-text">
+                <h1>SMAN 1 KUDUS</h1>
+                <p>SMASAKU BERSINERGI</p>
+            </div>
+        </div>
+
+        <!-- Tombol hamburger (mobile) -->
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../visi-misi.html">Visi & Misi</a></li>
+            <li><a href="../guru-staf.html">Guru & Staf</a></li>
+            <li><a href="../sejarah.html">Sejarah</a></li>
+            <li><a href="../galeri.html">Galeri</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>Hubungi Kami</h1>
+      <p>Punya pertanyaan atau masukan? Jangan ragu untuk menghubungi SMA Negeri 1 Kudus. Kami siap membantu Anda.</p>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="kontak-info">
+      <div class="contact-wrapper">
+        <!-- Informasi Kontak (Kiri) -->
+        <div class="contact-info-cards">
+          <div class="info-card">
+            <div class="info-icon-large"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-card-text">
+              <h4>Alamat Sekolah</h4>
+              <p>Jl. Pramuka No.41, Nganguk, Mlati Lor,<br>Kec. Kota Kudus, Kabupaten Kudus,<br>Jawa Tengah 59319</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon-large"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-card-text">
+              <h4>Telepon & Whatsapp</h4>
+              <p><b>Telepon:</b> (0291) 431368<br><b>Humas:</b> +62 812-3456-7890 (WA)</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon-large"><i class="fas fa-envelope"></i></div>
+            <div class="info-card-text">
+              <h4>Email & Surel</h4>
+              <p><b>Utama:</b> info@sma1kudus.sch.id<br><b>Tata Usaha:</b> tu@sma1kudus.sch.id</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulir Kontak (Kanan) -->
+        <div class="contact-form-container">
+          <h3>Kirim Pesan</h3>
+          <p>Silakan isi formulir di bawah ini dan tim kami akan merespons secepat mungkin.</p>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input type="email" id="email" class="form-control" placeholder="contoh@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subjek">Subjek Pesan</label>
+              <select id="subjek" class="form-control" required>
+                <option value="" disabled selected>Pilih subjek...</option>
+                <option value="PPDB">Informasi Pendaftaran (PPDB)</option>
+                <option value="Akademik">Informasi Akademik</option>
+                <option value="Kerjasama">Kerjasama / Kunjungan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan Anda</label>
+              <textarea id="pesan" class="form-control" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              Kirim Pesan Sekarang <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+
+        <!-- Kolom 1: Logo, Semboyan & Media Sosial -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="../assets/other/logoSMA.png" alt="Logo SMA Negeri 1 Kudus">
+          </div>
+
+          <div class="footer-brand-content">
+            <h4>Semboyan Sekolah</h4>
+
+            <p class="footer-quote">
+              "Pendidikan bukan sekadar mengisi wadah, melainkan
+              menyalakan api pengetahuan, integritas, dan semangat
+              berkarya untuk bangsa."
+            </p>
+
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/sman1kudus?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/pages/SMA%201%20Kudus/169882746373431/#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.tiktok.com/@sman1kudus?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="https://www.youtube.com/@smanegeri1kudus" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Informasi -->
+        <div class="footer-col">
+          <h4>Informasi</h4>
+
+          <div class="footer-links-list">
+            <a href="waka-kurikulum.html">
+              <i class="fas fa-angle-right"></i> Waka Kurikulum
+            </a>
+            <a href="waka-kesiswaan.html">
+              <i class="fas fa-angle-right"></i> Waka Kesiswaan
+            </a>
+            <a href="waka-prasarana.html">
+              <i class="fas fa-angle-right"></i> Waka Sarana Prasarana
+            </a>
+            <a href="waka-humas.html">
+              <i class="fas fa-angle-right"></i> Waka Humas
+            </a>
+            <a href="kontak.html">
+              <i class="fas fa-angle-right"></i> Kontak Smasaku
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom 3: Unduhan -->
+        <div class="footer-col">
+          <h4>Unduhan & Berkas</h4>
+
+          <div class="footer-links-list">
+            <a href="assets/pdf/KALDIK-PROV-JATENG-2026-2027.pdf">
+              <i class="fas fa-file-pdf"></i> Kalender Akademik 2025/2026
+            </a>
+            <a href="https://sma.kemendikdasmen.go.id/digihub/ebook">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Buku Panduan Siswa
+            </a>
+            <a href="https://journal.unpas.ac.id/index.php/pendas/article/view/67299/38679">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Jurnal Penelitian Sekolah
+            </a>
+            <a href="assets/pdf/JUKOP-SPMB-SMAN-SMKN-SLBN-Jateng-2026-.pdf">
+              <i class="fas fa-file-pdf"></i> Brosur SPMB Online
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMA Negeri 1 Kudus (SMASA).</p>
+      </div>
+    </footer>
+
+    <!-- SCRIPT MOBILE TOGGLE -->
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("navLinks");
+      const icon = toggle.querySelector("i");
+
+      toggle.addEventListener("click", function () {
+        menu.classList.toggle("open");
+
+        if (menu.classList.contains("open")) {
+          icon.className = "fas fa-times";
+        } else {
+          icon.className = "fas fa-bars";
+        }
+      });
+    </script>
+  </body>
+</html>
